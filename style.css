@@ -1,0 +1,417 @@
+/* https://nicepage.com/ru/html-templates/preview/dizayn-tekhnologiy-budushchego-12295?device=desktop */
+/* https://promotion.ru/ */
+/* Машина времени есть у каждого из нас: то, что переносит в прошлое — воспоминания; то, что уносит в будущее — мечты.
+
+© Герберт Джордж Уэллс  */
+/* 1. высказывания (слайдер)
+2. эталон времени
+3. Гравитационное замедление времени
+4. часовые пояса (ускорить, замедлить)
+размеры часов, подписи, стрелки*/
+@font-face {
+    font-family: Roboto;
+    src: url(font/Roboto-BlackItalic.ttf);
+}
+@font-face {
+    font-family: RobotoReg;
+    src: url(font/Roboto-Regular.ttf);
+}
+@font-face {
+    font-family: RobotoBold;
+    src: url(font/Roboto-Bold.ttf);
+}
+body{
+    margin: 0;
+}
+header{
+    background-image: url(1.jpeg);
+    height: 100vh;
+    background-attachment: fixed;
+}
+header h1{
+    font-family: Roboto;
+    font-size: 5vw;
+    color: white;
+    margin: 0;
+    margin-left: 7vw;
+    padding-top: 55vh;
+    width: fit-content;
+}
+.time{
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.time img{
+    width: 30%;
+    height: 530px;
+    object-fit: cover;
+}
+.time .pseudo{
+    width: 22%;
+    height: 530px;
+    position: absolute;
+    background-color: rgba(56, 56, 56, 0.144);
+    top: 50px;
+    left: 33%;
+}
+.time hr{
+    background-color: black;
+    border-width: 1px;
+    height: 1px;
+    border: none;
+    width: 100px;
+    margin-left: 0;
+    margin-right: 0;
+} 
+.head{
+    width: 40%;
+    align-self: center;
+}
+.head h1{
+    font-family: Roboto;
+    font-size: 2rem;
+}
+.txt{
+    display: flex;
+    justify-content: center;
+    /* width: 50%; */
+}
+.txt2{
+    margin-left: 10px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    font-family: RobotoReg;
+    font-size: 1rem;
+    /* width: 60%; */
+}
+.txt2 p{
+    margin-top: 0;
+}
+.txt2 dt{
+    font-family: RobotoBold;
+}
+.txt2 span{
+    font-family: RobotoBold;
+}
+figcaption{
+    width: 50%;
+    padding-left: 5vw;
+    box-sizing: border-box;
+}
+figure{
+    width: 70vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slider{
+    width: 70vw;
+    margin: auto;
+    overflow: hidden;
+}
+figure img{
+    width: 50%;
+    height: 70vh;
+    object-fit: cover;
+    filter: grayscale();
+}
+.slides{
+    display: flex;
+    width: 280vw;
+    animation: run 23s infinite;
+    font-family: RobotoReg;
+    font-size: 1rem;
+}
+.clock{
+    display: flex;
+    padding: 5vw 5vw;
+    width: 70%;
+    margin: auto;
+    background-color: rgba(56, 56, 56, 0.144);
+    position: relative;
+    /* border: 1px solid red; */
+}
+.watch{
+    position: relative;
+}
+.clock img{
+    width: 100%;
+    position: relative;
+}
+.arrow1{
+    width: 30%;
+    height: 10px;
+    background-color: #262627;
+    position: absolute;
+    top: calc(50% - 5px);
+    left: calc(50% - 0px);
+    z-index: 2;
+    transform-origin: left;
+    transform: rotate(-90deg);
+    animation: go 60s  linear infinite;
+}
+@keyframes go{
+    from{
+        transform: rotate(-90deg);
+    }
+    to{
+        transform: rotate(270deg)
+    }
+}
+.arrow2{
+    width: 20%;
+    height: 10px;
+    background-color: #262627;
+    position: absolute;
+    top: calc(50% - 5px);
+    left: calc(50% - 0px);
+    z-index: 2;
+    transform-origin: left;
+    transform: rotate(-30deg);
+    transform-origin: left;
+    transform: rotate(-90deg);
+    /* animation-timing-function: steps(60); */
+    animation: go_short 3600s linear infinite;
+}
+@keyframes go_short{
+    from{
+        transform: rotate(-30deg);
+    }
+    to{
+        transform: rotate(330deg)
+    }
+}
+.arrow3{
+    width: 30%;
+    height: 10px;
+    background-color: #262627;
+    position: absolute;
+    top: calc(50% - 5px);
+    left: calc(50% - 0px);
+    z-index: 2;
+    transform-origin: left;
+    transform: rotate(-90deg); 
+    animation: go2 60s linear infinite;
+}
+@keyframes go2{
+    from{
+        transform: rotate(-90deg);
+    }
+    to{
+        transform: rotate(270deg)
+    }
+}
+.arrow4{
+    width: 20%;
+    height: 10px;
+    background-color: #262627;
+    position: absolute;
+    top: calc(50% - 5px);
+    left: calc(50% - 0px);
+    z-index: 2;
+    transform-origin: left;
+    transform: rotate(-30deg);
+    transform-origin: left;
+    transform: rotate(-90deg);
+    /* animation-timing-function: steps(60); */
+    animation: go_short2 3600s linear infinite;
+}
+@keyframes go_short2{
+    from{
+        transform: rotate(-90deg);
+    }
+    to{
+        transform: rotate(270deg)
+    }
+}
+.arrow5{
+    width: 30%;
+    height: 10px;
+    background-color: #262627;
+    position: absolute;
+    top: calc(50% - 5px);
+    left: calc(50% - 0px);
+    z-index: 2;
+    transform-origin: left;
+    transform: rotate(-90deg);
+    animation: go3 60s linear infinite;
+}
+@keyframes go3{
+    from{
+        transform: rotate(-90deg);
+    }
+    to{
+        transform: rotate(270deg)
+    }
+}
+.arrow6{
+    width: 20%;
+    height: 10px;
+    background-color: #262627;
+    position: absolute;
+    top: calc(50% - 5px);
+    left: calc(50% - 0px);
+    z-index: 2;
+    transform-origin: left;
+    transform: rotate(-30deg);
+    transform-origin: left;
+    transform: rotate(-90deg);
+    /* animation-timing-function: steps(60); */
+    animation: go_short3 3600s linear infinite;
+}
+@keyframes go_short3{
+    from{
+        transform: rotate(-150deg);
+    }
+    to{
+        transform: rotate(210deg)
+    }
+}
+.arrow7{
+    width: 30%;
+    height: 10px;
+    background-color: #262627;
+    position: absolute;
+    top: calc(50% - 5px);
+    left: calc(50% - 0px);
+    z-index: 2;
+    transform-origin: left;
+    transform: rotate(-90deg);
+    animation: go3 60s linear infinite;
+}
+@keyframes go3{
+    from{
+        transform: rotate(-90deg);
+    }
+    to{
+        transform: rotate(270deg)
+    }
+}
+.arrow8{
+    width: 20%;
+    height: 10px;
+    background-color: #262627;
+    position: absolute;
+    top: calc(50% - 5px);
+    left: calc(50% - 0px);
+    z-index: 2;
+    transform-origin: left;
+    transform: rotate(-30deg);
+    transform-origin: left;
+    transform: rotate(-90deg);
+    /* animation-timing-function: steps(60); */
+    animation: go_short4 3600s linear infinite;
+}
+@keyframes go_short4{
+    from{
+        transform: rotate(120deg);
+    }
+    to{
+        transform: rotate(480deg)
+    }
+}
+.plushka{
+    width: 15px;
+    height: 15px;
+    background-color: #262627;
+    position: absolute;
+    top: calc(50% - 7.5px);
+    left: calc(50% - 7.5px);
+    z-index: 2;
+    border-radius: 50%;
+}
+.clock >*{
+    width: 50%;
+}
+.city{
+    text-align: center;
+    font-family: RobotoBold;
+    font-size: 2.3rem;
+    font-weight: 900;
+}
+@keyframes run{
+    from{transform: translateX(0);    }
+    15%{transform: translateX(0);    }
+    25%{transform: translateX(-70vw);}
+    35%{transform: translateX(-70vw);}
+    50%{transform: translateX(-140vw);}
+    75%{transform: translateX(-140vw);}
+    90%{transform: translateX(-210vw);}
+    to{transform: translateX(-210vw);}
+}
+#fast{
+    position: absolute;
+    top: calc(50% - 45px);
+    left: -10%;
+    width: 70px;
+}
+#slow{
+    position: absolute;
+    top: calc(50% - 45px);
+    right: -10%;
+    width: 70px;
+    transform: scaleX(-1);
+}
+.slowly{
+    animation: go3 120s linear infinite;
+}
+.normalTime{
+    animation: go3 60s linear infinite;
+}
+.fastly{
+    animation: go3 30s linear infinite;
+}
+@media (max-width: 425px){
+    header h1{
+        font-size: 10vw;
+    }
+    header{
+        background-position: -90vw 0;
+    }
+    dd{
+        margin-left: 0;
+    }
+    .time p, .time dl{
+        font-size: 12px;
+    }
+    .time hr{
+        display: none;
+    }
+    .txt2{
+        margin-left: -20px;
+    }
+    .head h1{
+        font-size: 7vw;
+    }
+    .slides{
+        animation: none;
+        flex-direction: column;
+    }
+    figure{
+        flex-direction: column;
+        width: 80vw;
+        margin: 0;
+        margin-bottom: 50px;
+        display: block;
+    }
+    figure:nth-child(2){
+        display: none;
+    }
+    figure:nth-child(3){
+        display: none;
+    }
+    figure:nth-child(4){
+        display: none;
+    }
+    figure img{
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    figcaption {
+        padding-left: 0;
+        margin-left: 20%;
+        font-size: 20px;
+    }
+}
