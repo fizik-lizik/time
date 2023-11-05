@@ -443,4 +443,11 @@ figure img{
     .city{
         font-size: 7vw;
     }
+    .timeline h1{
+        font-size: 7vw;
+    }
+    .timeline{
+        width: 95%;
+        margin-top: 50px;
+    }
 }
