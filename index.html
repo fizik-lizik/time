@@ -7,16 +7,30 @@
     <meta name="description" content= "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus maxime quidem, dolores corporis hic vitae optio cum nam doloribus a quis facilis incidunt. Fuga architecto obcaecati dignissimos quo nostrum nesciunt." >
     <title>Время</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"> </script>
     <LINK REL = "shortcut icon" HREF = "icon4.ico" TYPE = "image/x-icon">
 </head>
 <body>
-    <header>        
+    <aside>
+    <div class="ham" onclick="work()"> 
+        <div class="line line1"></div>
+        <div class="line line2"></div>
+        <div class="line line3"></div>
+    </div>
+    </aside>
+    <nav>
+        <a href="#block1"><img src="icon.png" alt=""></a>
+        <a href="#block2">Время в науке</a>
+        <a href="#block3">Высказывания</a>
+        <a href="#block4">Часовые пояса</a>
+        <a href="#block5">Хроника календарей</a>
+        <a href="#block6">Единицы измерения</a>
+    </nav>
+    <header id="block1">        
         <h1>
             ЧТО ТАКОЕ ВРЕМЯ?
         </h1>
     </header>
-    <section class="time">
+    <section class="time" id="block2">
         <div class="head">
             <h1>
                 ВРЕМЯ В НАУКЕ
@@ -43,7 +57,7 @@
         </div>
         <img src="ракета3.jpg" alt="">
     </section>
-    <section class="cite">
+    <section class="cite" id="block3">
         <div class="slider">
             <div class="slides">
                 <figure>
@@ -77,7 +91,7 @@
             </div>
         </div>
     </section>
-    <section class="clock">
+    <section class="clock" id="block4">
     <div class="first">
         <div class="Moscow">
             <div class="watch">
@@ -129,11 +143,32 @@
     <img id="fast" src="time.png" alt="" onmousedown="fastTime()" >
     <img id="slow"  src="time.png" alt="" onmousedown="slowTime()">
     </section>
-    <section class="timeline">
+    <section class="timeline" id="block5">
         <h1>
             ХРОНИКА КАЛЕНДАРЕЙ
         </h1>
         <a href="https://www.tiki-toki.com/timeline/entry/2007399/-/"> <img src="calendar.png" alt=""> </a>
     </section>
+    <section class="timeUnits" id="block6">
+        <div class="space">
+            <img src="block/ian-parker-rWey_wseEcY-unsplash.jpg" alt="">
+            <p>Световой год — это расстояние, которое проходит луч света за один земной год, 
+                что составляет примерно 9,7 триллиона километров.</p>
+        </div>
+        <div class="music">
+            <p>Терция — музыкальный интервал шириной в три ступени; обозначается цифрой 3</p>
+            <img src="block/guitar3.jpg" alt="">
+        </div>
+        <div class="study">
+            <img src="block/semestr2.jpg" alt="" id="studying">
+            <p>Семестр — учебное полугодие в высших или специальных средних учебных заведениях.</p>
+        </div>
+    </section>    
+    
+    <footer>
+        
+    </footer>
+    <img id="home" src="arrow.png" alt="">
+    <script src="script.js"> </script>
 </body>
 </html>
